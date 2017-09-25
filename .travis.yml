@@ -10,6 +10,8 @@ matrix:
   include:
     - os: Linux
       python: 3.5
+    - os: Linux
+      python: 3.6
 before_install:
   - .travis/before_install.sh
 install:
