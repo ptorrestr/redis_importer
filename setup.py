@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+from multiprocessing import util
+import subprocess
 from setuptools import setup
 
 def readme():
