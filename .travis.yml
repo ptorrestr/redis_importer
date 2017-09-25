@@ -5,6 +5,7 @@ cache:
 env:
   global:
     - MINICONDA_BUILD_FOLDER=condatmp
+    - MINICONDA_ROOT_FOLDER=$HOME/miniconda/root
 matrix:
   include:
     - os: Linux
