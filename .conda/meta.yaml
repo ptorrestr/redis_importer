@@ -9,12 +9,15 @@ requirements:
   build:
     - python
     - setuptools
-    - redis
+    - redis-py
     - t2db_objects >=0.7.6
   run:
     - python
-    - redis
+    - redis-py
     - t2db_objects >=0.7.6
+test:
+  imports:
+    - redis_importer.importer
 about:
   home: https://github.com/brian/redis_importer
   license: GPLv3
