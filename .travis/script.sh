@@ -3,4 +3,4 @@
 set -e -x
 
 export PATH="$MINICONDA_ROOT_FOLDER/bin:$PATH"
-conda build -t --python 3.5 .conda/
+conda build -t --python $TRAVIS_PYTHON_VERSION .conda/
