@@ -1,0 +1,20 @@
+package:
+  name: "redis_importer"
+  version: {{ GIT_DESCRIBE_TAG }}
+build:
+  number: {{ GIT_DESCRIBE_NUMBER }}
+source:
+  path: ../
+requirements:
+  build:
+    - python
+    - setuptools
+    - redis
+    - t2db_objects >= 0.7.6
+  run:
+    - python
+    - redis
+    - t2db_objects >= 0.7.6
+about:
+  home: https://github.com/brian/redis_importer
+  license: GPLv3

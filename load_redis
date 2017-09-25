@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+source $HOME/root/env/python/indexer/bin/activate
+redis_host="localhost"
+redis_port=8086
+redis_db=0
+input_file="users.json"
+
+
+wget https://uimr.insight-centre.org/~briwal/$input_file
+
+$conda_env/bin/redis-importer \
+  --rs-host $redis_host \
+  --rs-port $redis_port \
+  --rs-db $redis_db \
+  -i $input_file
+
+rm $input_file
+source deactivate
