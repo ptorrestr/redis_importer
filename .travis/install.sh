@@ -3,5 +3,5 @@
 set -x -e
 
 export PATH="$MINICONDA_ROOT_FOLDER/bin:$PATH"
-conda build --no-test --no-anaconda-upload --croot $MINICONDA_BUILD_FOLDER .conda/
+conda build -b --croot $MINICONDA_BUILD_FOLDER --prefix-length 20 .conda/
 ~                                                  
