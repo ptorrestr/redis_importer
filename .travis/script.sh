@@ -2,5 +2,5 @@
 
 set -e -x
 
-export PATH="$HOME/miniconda/bin:$PATH"
+export PATH="$MINICONDA_ROOT_FOLDER/bin:$PATH"
 conda build -t --croot $MINICONDA_BUILD_FOLDER .conda/

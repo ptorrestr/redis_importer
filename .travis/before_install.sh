@@ -14,16 +14,14 @@ else
   python_v="3"
 fi
 wget "https://repo.continuum.io/miniconda/Miniconda${python_v}-latest-${os}-x86_64.sh" -O miniconda.sh;
-bash miniconda.sh -b -p $HOME/miniconda
-export PATH="$HOME/miniconda/bin:$PATH"
+bash miniconda.sh -b -p $HOME/miniconda/root
+export PATH="$MINICONDA_ROOT_FOLDER/bin:$PATH"
 hash -r
 conda config --set always_yes yes --set changeps1 no
 conda update -q conda
 conda info -a
 
-conda config --add channels salford_systems
 conda config --add channels conda-forge
 conda config --add channels ptorrestr
-conda config --append channels pkgw
 conda config --get channels
 conda install conda-build anaconda-client
