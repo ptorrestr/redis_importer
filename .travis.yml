@@ -3,6 +3,9 @@ cache:
   directories:
     - "$HOME/.cache/pip"
     - "$HOME/.pyenv"
+env:
+  global:
+    - MINICONDA_BUILD_FOLDER=condatmp
 matrix:
   include:
     - os: Linux
