@@ -20,11 +20,11 @@ hash conda 2> /dev/null || (\
   && bash miniconda.sh -b -p $HOME/miniconda/root \
   && export PATH="$MINICONDA_ROOT_FOLDER/bin:$PATH" \
   && hash -r \
-  && conda config --set always_yes yes --set changeps1 no \
   && conda update -q conda \
   && conda info -a \
   && rm miniconda.sh \
-  && conda config --add channels conda-forge \
-  && conda config --add channels ptorrestr \
   && conda install conda-build anaconda-client \
   && conda -V)
+
+conda config --set always_yes yes --set changeps1 no
+conda config --add channels ptorrestr
